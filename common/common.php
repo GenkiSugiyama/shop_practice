@@ -22,5 +22,10 @@ function gengo($seireki) {
 	return($gengo);
 }
 
-
+function sanitize($before) {
+	foreach($before as $key => $val){
+		$after[$key] = htmlspecialchars($val);
+	}
+	return $after;
+}
 ?>
